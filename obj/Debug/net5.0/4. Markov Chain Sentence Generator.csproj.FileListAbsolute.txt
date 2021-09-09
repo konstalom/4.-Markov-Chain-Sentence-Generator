@@ -1,0 +1,16 @@
+Q:\Programming Challenge\4. Markov Chain Sentence Generator\bin\Debug\net5.0\4. Markov Chain Sentence Generator.exe
+Q:\Programming Challenge\4. Markov Chain Sentence Generator\bin\Debug\net5.0\4. Markov Chain Sentence Generator.deps.json
+Q:\Programming Challenge\4. Markov Chain Sentence Generator\bin\Debug\net5.0\4. Markov Chain Sentence Generator.runtimeconfig.json
+Q:\Programming Challenge\4. Markov Chain Sentence Generator\bin\Debug\net5.0\4. Markov Chain Sentence Generator.runtimeconfig.dev.json
+Q:\Programming Challenge\4. Markov Chain Sentence Generator\bin\Debug\net5.0\4. Markov Chain Sentence Generator.dll
+Q:\Programming Challenge\4. Markov Chain Sentence Generator\bin\Debug\net5.0\ref\4. Markov Chain Sentence Generator.dll
+Q:\Programming Challenge\4. Markov Chain Sentence Generator\bin\Debug\net5.0\4. Markov Chain Sentence Generator.pdb
+Q:\Programming Challenge\4. Markov Chain Sentence Generator\obj\Debug\net5.0\4. Markov Chain Sentence Generator.csproj.AssemblyReference.cache
+Q:\Programming Challenge\4. Markov Chain Sentence Generator\obj\Debug\net5.0\4. Markov Chain Sentence Generator.GeneratedMSBuildEditorConfig.editorconfig
+Q:\Programming Challenge\4. Markov Chain Sentence Generator\obj\Debug\net5.0\4. Markov Chain Sentence Generator.AssemblyInfoInputs.cache
+Q:\Programming Challenge\4. Markov Chain Sentence Generator\obj\Debug\net5.0\4. Markov Chain Sentence Generator.AssemblyInfo.cs
+Q:\Programming Challenge\4. Markov Chain Sentence Generator\obj\Debug\net5.0\4. Markov Chain Sentence Generator.csproj.CoreCompileInputs.cache
+Q:\Programming Challenge\4. Markov Chain Sentence Generator\obj\Debug\net5.0\4. Markov Chain Sentence Generator.dll
+Q:\Programming Challenge\4. Markov Chain Sentence Generator\obj\Debug\net5.0\ref\4. Markov Chain Sentence Generator.dll
+Q:\Programming Challenge\4. Markov Chain Sentence Generator\obj\Debug\net5.0\4. Markov Chain Sentence Generator.pdb
+Q:\Programming Challenge\4. Markov Chain Sentence Generator\obj\Debug\net5.0\4. Markov Chain Sentence Generator.genruntimeconfig.cache
