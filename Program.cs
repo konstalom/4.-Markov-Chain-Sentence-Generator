@@ -71,43 +71,56 @@ class Program {
             Console.WriteLine(char.ToUpper(sentence[0]) + sentence.Substring(1) + RandomSign());
         }
     }
-    static void Main(string[] args) {
-        List<GraphedWord> listofwords = new List<GraphedWord>();
-        bool x = true;
-        int sentences = 0;
-        int numberofwords = 0;
-        Console.WriteLine("Hello! Type an origin .txt file path. (As big as possible):");
-        while (x==true) {
-            try {
-                listofwords = WordLibraryMaker(Console.ReadLine());
+    static void MyMain(){
+            List<GraphedWord> listofwords = new List<GraphedWord>();
+            bool x = true;
+            int sentences = 0;
+            int numberofwords = 0;
+            Console.WriteLine("Hello! Type an origin .txt file path. (As big as possible):");
+            while (x == true)
+            {
+                try
+                {
+                    listofwords = WordLibraryMaker(Console.ReadLine());
                     x = false;
+                }
+                catch
+                {
+                    Console.WriteLine("Wrong path! Try again:");
+                }
             }
-            catch {
-                Console.WriteLine("Wrong path! Try again:");
-            }
-        }
-        Console.WriteLine("Now choose: 1. Number of sentences; 2. Number of words in each of them:");
-        x = true;
-        while(x==true){
-                try {
+            Console.WriteLine("Now choose: 1. Number of sentences; 2. Number of words in each of them:");
+            x = true;
+            while (x == true)
+            {
+                try
+                {
                     sentences = Convert.ToInt32(Console.ReadLine());
                     x = false;
                 }
-                catch {
+                catch
+                {
                     Console.WriteLine("Type number of sentences again:");
                 }
-        }
-        x = true;
-        while (x == true) {
-            try {
-                numberofwords = Convert.ToInt32(Console.ReadLine());
-                x = false;
             }
-            catch {
-                Console.WriteLine("Type number of words again:");
+            x = true;
+            while (x == true)
+            {
+                try
+                {
+                    numberofwords = Convert.ToInt32(Console.ReadLine());
+                    x = false;
+                }
+                catch
+                {
+                    Console.WriteLine("Type number of words again:");
+                }
             }
+            SentenceGenerator(listofwords, sentences, numberofwords);
         }
-        SentenceGenerator(listofwords, sentences, numberofwords);
+    
+    static void Main(string[] args) {
+        MyMain();
     }
 }
 }

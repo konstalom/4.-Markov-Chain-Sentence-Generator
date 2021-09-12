@@ -28,19 +28,24 @@ namespace _4._Markov_Chain_Sentence_Generator
             }
         }
         public string NextWord() {
-            Random rnd = new Random();
-            int[] probabilities = new int[NextWords.Count()];
-            for(int k = 0; k < NextWords.Count(); k++) {
-                probabilities[k] = NextWords[k].TimesOccured;
+            if(NextWords.Count() > 0){ 
+                Random rnd = new Random();
+                int[] probabilities = new int[NextWords.Count()];
+                for(int k = 0; k < NextWords.Count(); k++) {
+                    probabilities[k] = NextWords[k].TimesOccured;
+                }
+                int chosenword = rnd.Next(0, QuantityOfConnectings);
+                int count = 0;
+                int sum = 0;
+                for(int i = 0; chosenword > sum; i++){
+                    sum += NextWords[i].TimesOccured;
+                    count++;
+                }
+                return NextWords[count].Word;
             }
-            int chosenword = rnd.Next(0, QuantityOfConnectings);
-            int count = 0;
-            int sum = 0;
-            for(int i = 0; chosenword > sum; i++){
-                sum += NextWords[i].TimesOccured;
-                count++;
+            else {
+                return this.Word;
             }
-            return NextWords[count].Word;
         }
     }
     static class ListNextWordExtention

@@ -1,0 +1,5 @@
+First of all, it needs README
+1. Parallel it
+2. Somewhere it makes out of range with (10, 10), but not always
+3. Make it Serializable
+4. Just make it better, if i can

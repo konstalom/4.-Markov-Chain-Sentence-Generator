@@ -4,6 +4,9 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
     <RootNamespace>_4._Markov_Chain_Sentence_Generator</RootNamespace>
+    <Authors>Kachanov Konstantin</Authors>
+    <Company />
+    <Product />
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
