@@ -9,11 +9,12 @@ namespace _4._Markov_Chain_Sentence_Generator
 {
 class Program {
     static string[] WordsDevider(string text) {
-        string[] separators = new string[] {" ", "\n", "—", "\r", "," , "!", "?", ".", "(", ")", ":", ";"};
+        string[] separators = new string[] {" ", "\n", "—", "\r", "," , "!", "?", ".", "(", ")", ":", ";" , "\"", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
         string[] words = text.Split(separators, StringSplitOptions.RemoveEmptyEntries);
         for(int i = 0; i < words.Length; i++){
             words[i] = words[i].ToLower();
         }
+        Console.WriteLine("Quantity of words in WordsDevider():" + words.Count());
         return words;
     }
     static List<GraphedWord> WordLibraryMaker(string path) {
@@ -21,8 +22,12 @@ class Program {
         string[] words;
         StreamReader sr = new StreamReader(path);
         words = WordsDevider(sr.ReadToEnd());
+        int quantityofwords = words.Count();
+        int percentage;
         foreach (string word in words) {
             int indexofword = Array.IndexOf(words, word);
+            percentage = (indexofword/quantityofwords)*100;
+            Console.WriteLine("Loading" + percentage + "%");
             if (listofwords.Exists(element => element.Word == word)) {//if this element already exists
                 if (Array.Exists<string>(words, element => indexofword + 1 == Array.IndexOf(words, element))) {//if that is not the last word
                     listofwords.Find(element => element.Word == word).NextWords.SpeciallyAdd(words[indexofword + 1]);
@@ -63,8 +68,14 @@ class Program {
             string sentence = "";
             word = listofwords[rnd.Next(0, listofwords.Count() - 1)];
             sentence += word.Word;
+            string nextwordsaved = " ";
             for(int k = 0; k + 1 < numberofwords; k++){
-                string nextwordsaved = word.NextWord();
+                if(nextwordsaved == "(?)"){
+                        nextwordsaved = listofwords[rnd.Next(0, listofwords.Count() - 1)].Word;
+                }
+                else{ 
+                nextwordsaved = word.NextWord();
+                }
                 sentence += " " + nextwordsaved;
                 word = listofwords.Find(element => element.Word == nextwordsaved);
             }

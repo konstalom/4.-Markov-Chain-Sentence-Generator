@@ -41,7 +41,12 @@ namespace _4._Markov_Chain_Sentence_Generator
                     sum += NextWords[i].TimesOccured;
                     count++;
                 }
-                return NextWords[count].Word;
+                try { 
+                    return NextWords[count].Word;
+                }
+                catch{
+                    return "(?)";
+                }
             }
             else {
                 return this.Word;

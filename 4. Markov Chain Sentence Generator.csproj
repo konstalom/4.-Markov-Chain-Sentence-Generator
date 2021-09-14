@@ -7,6 +7,7 @@
     <Authors>Kachanov Konstantin</Authors>
     <Company />
     <Product />
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
